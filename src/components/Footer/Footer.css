@@ -1,0 +1,6 @@
+@import '../../theme.css';
+
+.footer{
+    min-height: 5Rem;
+    background-color: var(--footer);
+}
