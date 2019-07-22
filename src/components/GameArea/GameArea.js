@@ -42,7 +42,7 @@ class GameArea extends React.Component{
           let children = []
           //Inner loop to create children
           for (let col = 0; col < 5; col++) {
-            children.push(<PictureCard handleClick={(id) => this.handCardClick(id)} id={this.state.colorOrder[(col+(row*5))]}className="column card">{`Column ${col + 1}`}</PictureCard>)
+            children.push(<PictureCard handleClick={(id) => this.handCardClick(id)} id={this.state.colorOrder[(col+(row*5))]} lastResult={this.props.lastResult} className="column card">{`Column ${col + 1}`}</PictureCard>)
           }
           //Create the parent and add the children
           grid.push(<div className="row">{children}</div>)

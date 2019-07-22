@@ -13,7 +13,8 @@ class App extends React.Component{
       beenClicked: [44,90,89],
       highScore: 0,
       currentScore: 0,
-      message: 'Click a tile to begin.'
+      message: 'Click a tile to begin.',
+      lastResult: true
     };
   }
 
@@ -30,13 +31,15 @@ class App extends React.Component{
       //pick correctly
       this.setState({
         currentScore: this.state.currentScore + 1,
-        message: 'You clicked correctly.'
+        message: 'You clicked correctly.',
+        lastResult: 'nothing'
       }, this.checkHighScore);
     } else {
       this.setState({
         beenClicked: [],
         currentScore: 0,
-        message: 'You clicked wrong. Try again.'
+        message: 'You clicked wrong. Try again.',
+        lastResult: 'shake'
       });
     }
   };
@@ -60,7 +63,7 @@ class App extends React.Component{
       <div className="App">
       <Navbar info={this.state}/>
       <Header />
-      <GameArea handleClick={this.handleClick}/>
+      <GameArea handleClick={this.handleClick} lastResult={this.state.lastResult}/>
       <Footer />
       </div>
     );

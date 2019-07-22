@@ -8,7 +8,7 @@ const PictureCard = (props) => {
     }
         
     return (
-        <div onClick={doClick} className="wrapper" id={props.id}>
+        <div onClick={doClick} className={`wrapper ${props.lastResult}`} id={props.id}>
             <div className={`color-${props.id} card`} ></div>
         </div>
         

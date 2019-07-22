@@ -44,3 +44,8 @@
 .color-complement-2 { color: #4BB74B }
 .color-complement-3 { color: #178317 }
 .color-complement-4 { color: #036003 }
+
+.shake {
+    -webkit-animation: shake .7s .0125s;
+    animation: shake .7s .0125s
+}
