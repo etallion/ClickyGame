@@ -1,9 +1,17 @@
 import React from 'react';
-import styles from './PictureCard.css';
+import './PictureCard.css';
 
-const PictureCard = () => {
+const PictureCard = (props) => {
+   function doClick(e){
+    //    console.log("ID=", props.handlClick);
+        props.handleClick(props.id);
+    }
+        
     return (
-        <div className="pictureCard">Picture</div>
+        <div onClick={doClick} className="wrapper" id={props.id}>
+            <div className={`color-${props.id} card`} ></div>
+        </div>
+        
     );
 };
 
